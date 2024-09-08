@@ -1,0 +1,12 @@
+[{
+    "_id": "<objectId>",
+    "category_name": "<string>",
+    "advert_name": "<string>",
+    "advert_description": "<string>",
+    "price": "<string>",
+    "contact_info": "<string>",
+    "location": "<string>",
+    "imageURL": "<string>",
+    "views": "<integer>",
+    "key": "<string>"
+}]

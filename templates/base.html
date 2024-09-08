@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="Description" content="Advertisement page.">
+	<title>Snoop - {{ tittle }}</title>
+	<link rel="icon" type="image/png" sizes="16x16" href="{{url_for('static', filename='images/logo/logo.png')}}">
+    <!-- Links for FontAwesome, Bootstrap, Style.css and Email.js service respectively -->
+    <script src="https://kit.fontawesome.com/41a908fb89.js" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}" type="text/css">
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2.4.1/dist/email.min.js"></script>
+</head>
+
+<body>
+    <!-- Navigation bar -->
+	<nav id="nav">
+		<ul class="nav fixed-top justify-content-center">
+			<li data-toggle="tooltip" title="Snoop - Home page">
+				<a href="{{url_for('home')}}">
+					<img src="{{url_for('static', filename='images/logo/logo.png')}}" class="d-inline-block align-top nav-image" alt="Adverts">
+                </a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="{{url_for('marketplace')}}" data-toggle="tooltip" title="See ALL the adverts!">Marketplace</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="{{url_for('add_advert')}}" data-toggle="tooltip" title="No registration needed! Place your add for FREE!">Add advert</a>
+			</li>
+		</ul>
+	</nav>
+	{% block content %}
+	{% endblock %}
+    <!-- Footer section-->
+	<footer id="footer">
+        <div class="row no-margin d-none d-md-block text-center">
+            {% for view in views %}
+			<h5>This page has been visited {{view.views}} times! Thank you!</h5>
+			{% endfor %}
+        </div>
+		<div class="row no-margin">
+			<div class="d-none d-md-block col-3 text-center vertical-align-center">
+				<h5>Our projects</h5>
+                <ul class="no-padding">
+                    <li class="list-inline footer-icons" data-toggle="tooltip" title="Portfolio">
+                        <a href="https://www.linkedin.com/in/othmane-semmar-506987224/" target="_blank" rel="noopener">
+						    <i class="fab fa-linkedin footer-icon linkedin" aria-hidden="true"></i>
+						        <span class="sr-only">Portfolio </span>
+                        </a>
+                    </li>
+                    <li class="list-inline footer-icons" data-toggle="tooltip" title="Weather 360°">
+                        <a href="https://www.linkedin.com/in/oussama-osseili-1a8a74263/" target="_blank" rel="noopener">
+						    <i class="fab fa-linkedin footer-icon linkedin" aria-hidden="true"></i>
+						        <span class="sr-only">Weather 360° </span>
+                        </a>
+                    </li>
+                </ul>
+			</div>
+            <div class="col-12 col-sm-6 col-6 text-center vertical-align">
+                <h4>© 2024 for Prowed Media SARL</h4>
+            </div>
+            <div class="col-12 col-sm-6 col-md-3 text-center vertical-align-center no-padding">
+                <h5 >Contact us!</h5>
+                <ul class="no-padding">
+                    <li class="list-inline footer-icons">
+                        <a href="https://www.facebook.com/prowebmedia" target="_blank" rel="noopener">
+						    <i class="fab fa-facebook footer-icon facebook" aria-hidden="true"></i>
+						        <span class="sr-only">facebook</span>
+                        </a>
+                    </li>
+                    <li class="list-inline footer-icons">
+                        <a href="https://www.linkedin.com/in/oussama-osseili-1a8a74263/" target="_blank" rel="noopener">
+						    <i class="fab fa-linkedin footer-icon linkedin" aria-hidden="true"></i>
+						        <span class="sr-only">linkedin</span>
+                        </a>
+                    </li>
+                    <li class="list-inline footer-icons">
+                        <i class="fas fa-envelope-open-text footer-icon e-mail" aria-hidden="true" data-toggle="modal" data-target="#contactModal"></i>
+					        <span class="sr-only">E-mail</span>
+                    </li>
+                </ul>
+            </div>
+		</div>
+	</footer>
+    <!-- Contact form modal -->
+	<div class="modal fade" id="contactModal" tabindex="-1" role="dialog" aria-labelledby="contactModal" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h2 class="modal-title" id="contactModalheading">Contact me!</h2>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+				</div>
+				<div class="modal-body">
+					<form id="contactForm">
+						<input type="text" name="name" class="form-control" id="fullname" placeholder="Name*" required/>
+						<input type="email" name="emailaddress" class="form-control" id="emailaddress" minlength="10" pattern=".+.com" placeholder="Email adress*" required/>
+						<textarea rows="5" name="projectsummary" class="form-control" id="projectsummary" placeholder="Write your query and click submit!*" required></textarea>
+						<button form="contactForm" type="submit" id="submit" class="btn btn-danger" >Submit!</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+    <!-- Scripts and JavaScript files -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+		integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+	</script>
+	<script src="{{url_for('static', filename='javascript/email.js')}}"></script>
+    <script src="{{url_for('static', filename='javascript/script.js')}}"></script>
+</body>
+
+</html>

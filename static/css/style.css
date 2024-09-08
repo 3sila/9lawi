@@ -1,0 +1,712 @@
+/* --------------------------------------- Google fonts --------------------------------------- */
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+
+}
+body{
+    background-color: #ededed;
+    font-family: 'Lato', sans-serif;
+    
+}
+.no-margin{
+    margin: 0px;
+}
+.no-padding{
+    padding: 0;
+}
+.no-padding-right{
+    padding-right: 0px
+}
+.no-padding-left{
+    padding-left: 0px;
+}
+
+/* --------------------------------------- Navbar --------------------------------------- */
+#nav, .nav{
+    min-height: 85px;
+    height: 4vw;
+    background-color: #fafafa;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.5); 
+    padding:2vh;
+}
+
+.nav-link{
+    padding: 10px;
+    height: 50px;
+    color: rgba(0, 0, 0, 0.9);
+    font-size: 23px;
+    font-weight: 700;
+    margin: 0 10px;
+    transition-duration: 0.25s;
+}
+.nav-link:hover{
+    border-radius: 20px;
+    font-weight: 700;
+    font-size: 28px;
+    color: black;
+    transition-duration: 0.25s;
+    padding: 5px 10px 0px;
+}
+.nav-image{
+    margin: 7px 20px 0px;
+    width: 40px;
+    height: 40px;
+    transition-duration: 0.2s;
+}
+.nav-image:hover{
+    width: 50px;
+    height: 50px;
+    transition-duration: 0.25s;
+    border-radius: 20px;
+}
+/* --------------------------------------- Breadcrumbs --------------------------------------- */
+.breadcrumb{
+    margin-bottom: 0px;
+    background-color: #ededed;
+}
+
+/* --------------------------------------- Home page buttons --------------------------------------- */
+.home-btn{
+    margin-top: 155px;
+    margin-bottom: 10px;
+}
+.btn-outline-light{
+    width: 120px;
+    border: 1px solid white;
+    background-color: rgba(0, 0, 0, 0.5);
+    font-size: 18px;
+    font-weight: 500;
+    padding: 10px 0;
+    margin: 10px 0 10px 0;
+    transition-duration: 0.25s;
+
+}
+.btn-outline-light:hover{
+    background-color:rgba(255, 255, 255, 0.85);
+    color: rgb(0, 0, 0);
+    border-color: white;
+    font-weight: 600;
+    transition-duration: 0.25s;
+}
+.btn-motors{
+    border-radius: 10px 0 0 10px;
+    color: white;
+}
+.btn-home{
+    border-radius: 0;
+    color: white;
+}
+.btn-pc{
+    border-radius: 0 10px 10px 0;
+    color: white;
+}
+.open-filters{
+    height: 35px;
+    padding: 2px;
+    margin: 3px 0px 0px 0px;
+    font-size: 16px;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+/* --------------------------------------- Search bar --------------------------------------- */
+.search-bar{
+    margin: 0px;
+}
+.search-outline{
+    padding: 7px;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+}
+.search-outline-home{
+    margin: 15px 0 15px;
+}
+#search{
+    text-align: center;
+    width: 350px;
+    border-radius: 10px;
+    padding: 5px;
+    background-color: white;
+    outline: none;
+    font-weight: 500;
+    font-size: 17px;
+}
+#btn-search-key{
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.3)
+}
+#btn-search-key:hover{
+    background-color: white;
+}
+/* --------------------------------------- More filters button --------------------------------------- */
+#more-filters{
+    margin-bottom: 10px;
+}
+.search-filter-input{
+    color: rgba(0, 0, 0, 0.85);
+    margin: 0px 2px 5px;
+
+}
+.btn-search{
+    width: 100px;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+/* --------------------------------------- Carousel --------------------------------------- */
+#carousel{
+    opacity: 0.9;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.5); 
+}
+.carousel-home{
+    width: 100%;
+    height: 500px;
+    z-index: -1;
+}
+
+/* --------------------------------------- Most viewed ad section --------------------------------------- */
+.top-ad-header{
+    padding: 30px 0px 30px;
+    font-size: 35px;
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.8);
+    text-decoration: underline;
+    cursor: pointer;
+        transition-duration: 0.35s;
+}
+#viewed-recent > p{
+    margin-bottom: 0px;
+}
+.top-ad-header:hover{
+    background-color: white;
+    transition-duration: 0.35s;
+}
+.my-ad{
+    color: white;
+    padding: 5px;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.border-top-ad{
+    border-radius: 5px;
+    border: 2px solid rgba(0, 0, 0, 0.5);
+}
+.carousel-top-ad{
+    height: 300px;
+
+}
+.carousel-top-ad-img{
+    width: 100%;
+    height: 300px;
+    border-right: 2px solid rgba(0, 0, 0, 0.5);
+}
+.carousel-caption{
+    margin: 0;
+    padding-bottom: 50px;
+    color: black;
+    text-align: center;
+}
+.top-ad-name{
+    font-weight: 600;
+}
+.top-ad-text{
+    padding: 3px;
+    font-weight: 500;
+    font-size: 18px;
+}
+.top-ad-text-price{
+    padding: 7px 7px 15px;
+    font-size: 25px;
+    letter-spacing: 2px;
+    font-weight: 600;
+}
+.top-ad-text-location{
+    margin-top: 20px;
+    padding: 15px 7px 7px;
+    font-size: 18px;
+    letter-spacing: 3px;
+    font-weight: 600;
+}
+.bg-color{
+    background-color: rgba(255, 255, 255, 0.75);
+}
+.carousel-control-prev-icon{
+    padding: 25px 10px;
+  background-color: #99D9EA;
+    border-radius: 10px
+}
+.carousel-control-next-icon{
+    padding: 25px 12px;
+    background-color: #99D9EA;
+    border-radius: 10px
+}
+
+/* --------------------------------------- Cards --------------------------------------- */
+.col-8,.col-sm-6,.col-md-4,.col-lg-3{
+    padding:0px;
+}
+.card{
+    margin:10px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.33);
+}
+.margin-top{
+    margin-top: 7px;
+}
+.card-body{
+    padding: 0 5px 5px;
+}
+.card-title{
+    font-size: 25px;
+    font-weight: 600;
+    text-align: left;
+    margin: 0 5px;
+}
+.card-image-marketplace{
+    height: 200px;
+    width: 100%;
+}
+.card-text{
+    font-size: 17px;
+    font-weight: 600;
+    text-align: left;
+    margin: 8px 5px;
+}
+.views-icon{
+    width: 12px;
+    height: 12px;
+}
+.price{
+    padding-left: 10px;
+    font-size: 18px;
+}
+.location{
+    font-size: 15px
+}
+
+/* --------------------------------------- Delete, Edit, Submit, Cancel, Go to top buttons --------------------------------------- */
+.delete-btn{
+    color: white;
+    width: 150px;
+    margin: 5px;
+    font-weight: 600;
+    background-color: rgb(255, 81, 0, 0.8);
+    border-color: rgb(255, 81, 0); 
+}
+.delete-btn:hover{
+    background-color: rgb(255, 81, 0); 
+}
+.edit-btn{
+    color: white;
+    width: 150px;
+    margin: 5px;
+    font-weight: 600;
+    background-color: rgb(86, 164, 253, 0.8);
+    border-color: rgb(86, 164, 253);
+}
+.edit-btn:hover{
+    background-color: rgb(86, 164, 253);
+}
+.btn-submit{
+    color:white;
+    width: 150px;
+    margin: 5px;
+    font-weight: 600;
+    background-color: rgba(0, 145, 0, 0.8);
+    border-color: rgba(0, 145, 0);
+}
+.btn-submit:hover{
+    background-color: rgba(0, 145, 0);
+}
+.btn-cancel{
+    color: white;
+    width: 100px;
+    margin: 5px 10px;
+    background-color:rgba(231, 139, 0, 0.8);
+    font-weight: 600;
+    text-decoration: none;
+    border-color:rgb(231, 139, 0);
+}
+.btn-cancel:hover{
+    background-color:rgb(231, 139, 0); 
+}
+.btn-outline-secondary{
+    margin-top: 5px;
+    border-width: 1.5px;
+    font-weight: 400;
+    background-color: white;
+}
+.btn-outline-secondary:hover{
+    background-color: rgb(87, 87, 87);
+    font-weight: 500;
+}
+#copyURL{
+    margin: 15px;
+    border-color: rgba(0, 0, 0, 0.5);
+    border-width: 2px;
+}
+.btn-outline-dark:hover{
+    background-color: rgb(87, 87, 87);
+    border-color: rgba(0, 0, 0, 0.5);
+}
+#advert-url{
+    opacity: 0.01;
+    cursor: default;
+}
+/* --------------------------------------- Marketplace --------------------------------------- */
+.marketplace-form{
+    margin: 50px auto;
+}
+.marketplace-btn{
+    padding: 5px 
+}
+
+/* --------------------------------------- Add/Edit advert --------------------------------------- */
+.add-advert-form{
+    padding: 55px 0 20px;
+    margin: 40px auto 70px;
+    max-width: 700px;
+    text-align: left;
+    background-color: rgba(255, 255, 255, 0.7);
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+}
+.inputs{
+    padding: 10px 0 5px;
+}
+.add-inputs{
+    width: 80%;
+    background-color: white;
+    border-radius: 10px;
+    text-align: center;
+    outline: none;
+    font-size: 17px;
+    font-weight: 600;
+    padding: 3px;
+}
+.text-md-right{
+    font-weight: 600;
+    font-size: 17px;
+    padding: 10px 5px 5px;
+}
+.edit-header{
+    color: rgba(0, 0, 0);
+    font-size: 35px;
+    margin: 25px 0 25px;
+    font-weight: 700;
+}
+.red-star{
+    color: red;
+}
+.submit-row{
+    padding-top: 45px
+}
+/* --------------------------------------- View advert page --------------------------------------- */
+.view-advert-form{
+    margin: 50px auto;
+    background-color: rgba(255, 255, 255, 0.85);
+    border: 2px solid rgba(0, 0, 0, 0.5);
+    border-radius: 10px 10px 10px 10px;
+    max-width: 800px;
+}
+.view-advert-page{
+    padding: 0 4%;
+}
+.card-img-view{
+    border-bottom: 2px solid rgba(0, 0, 0, 0.5);
+}
+.img-view-ad{
+    height: 400px;
+}
+.advert-name{
+    font-weight: 600;
+    font-size: 50px;
+    padding: 10px 0px 0px 20px;
+    letter-spacing: 2px;
+}
+.advert-price{
+    padding: 0px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 45px
+}
+.advert-location,.advert-contact{
+    padding: 5px 0 5px 20px;
+    font-weight: 600;
+    font-size: 18px;
+    margin: 0;
+}
+.advert-description{
+    border-top: 2px solid rgba(0, 0, 0, 0.5);
+    padding: 50px 15px 10px 50px;
+    font-weight: 500;
+    font-size: 18px;
+}
+.advert-buttons{
+    margin: auto;
+}
+/* --------------------------------------- No results - page 404 --------------------------------------- */
+.little-padding{
+    padding: 0px 5%;
+}
+.page-404{
+    width: 100%;
+    margin: 0px auto 30px;
+    padding: 40px 0px;
+    border: 5px solid rgba(0, 0, 0, 0.85);
+    background: repeating-linear-gradient(25deg, #fafafa,  #ededed 70px,  #19a7fa2f 60px,  #19a7fa2f 140px);
+    border-radius: 5px;
+}
+.page-404 h1{
+    color: rgb(0, 119, 255);
+    font-weight: 700;
+    font-size: 70px;
+    text-transform: uppercase;
+    padding: 20px 0;
+}
+.page-404 h3{
+    font-weight: 700;
+    font-size: 35px;
+    padding: 20px 50px 40px;
+    color: black;
+}
+.page-404 a{
+    margin: 30px 0px 20px;
+    padding: 10px 40px;
+    font-weight: 500;
+    font-size: 20px;
+    border: 2px solid rgba(0, 0, 0, 0.5);
+}
+.search-result{
+    padding: 10px 0px;
+}
+/* --------------------------------------- Access denied - page 403 --------------------------------------- */
+.jumbotron{
+    margin: 50px auto 80px;
+    padding: 40px 0px;
+    border: 5px solid rgba(0, 0, 0, 0.85);
+    background: repeating-linear-gradient(25deg, #fafafa,  #ededed 70px,  #fa19192f 60px,  #fa19192f 140px);
+}
+.jumbotron h1{
+    color: red;
+    font-weight: 700;
+    font-size: 70px;
+    text-transform: uppercase;
+    padding: 20px 0;
+}
+.jumbotron h3{
+    font-weight: 700;
+    font-size: 35px;
+    padding: 20px 0px 40px;
+    color: black;
+}
+.jumbotron a{
+    margin: 30px 0px 20px;
+    padding: 10px 40px;
+    font-weight: 500;
+    font-size: 20px;
+    border: 2px solid rgba(0, 0, 0, 0.5);
+}
+
+/* --------------------------------------- Side adverts for rent --------------------------------------- */
+.d-none{
+    cursor: pointer;
+}
+.side-advert-size{
+    width: 100%;
+    height: 100%;
+}
+
+/* --------------------------------------- Pagination --------------------------------------- */
+.page-item.active .page-link{
+    background-color: rgb(87, 87, 87);
+    border-color: rgb(255, 255, 255);
+}
+.page-item .page-link{
+    background-color: rgb(255, 255, 255);
+    border-color: rgb(87, 87, 87);
+    color: rgb(87, 87, 87);
+    font-weight: 600;
+}
+
+/* --------------------------------------- Footer --------------------------------------- */
+#footer{
+    min-height: 200px;
+    height: 15vh;
+    padding: 2vh;
+    background-color: rgb(87, 87, 87);
+    border-top: 2px solid rgba(41, 41, 41, 0.5); 
+    color: #ebebeb
+}
+.list-inline{
+    display: inline-block;
+}
+.footer-icons{
+    margin: 15px 5px 0;    
+    font-size: 20px;
+}
+.footer-icon {
+    width: 42px;
+    height: 42px;    
+    border-radius: 50%;
+    padding:18px 0 14px;
+    line-height: 7px;
+    text-align: center;
+    color:rgba(34, 34, 34, 0.9);
+    background-color: rgba(255, 252, 250, 0.9);
+    transition: all 0.35s ease-in-out;
+}
+.footer-icon:hover{
+    color: rgba(255, 252, 250, 0.9);
+    background-color: rgb(3, 78, 0);
+}
+.github:hover {
+    background-color: #24292e; 
+}
+.linkedin:hover{
+    background-color: #0077b5;
+}
+.e-mail:hover{
+    background-color: rgb(240, 165, 2); 
+    cursor: pointer;
+}
+.vertical-align{
+    padding-top: 45px;
+}
+.vertical-align-center{
+    padding-top: 25px;
+}
+
+/* --------------------------------------- Modals --------------------------------------- */
+.modal-body {
+    text-align: center;
+}
+.modal-body > p {
+    margin-bottom:  15px;
+    font-size: 20px;
+}
+.modal-body > h2 {
+    font-size: 50px;
+    margin-top: 30px;
+}
+.modal-body > h4 {
+    font-weight: 500;
+}
+.form-control{
+    margin: 8px 0;
+}
+
+/* --------------------------------------- Media queries --------------------------------------- */
+@media only screen and (max-width: 860px) {
+    .nav-link{
+        font-size: 20px;
+        margin: 1px;
+    }
+    .nav-link:hover{
+        font-size: 24px;
+        padding: 10px 1px 5px 1px;
+    }
+    .nav-image{
+        width: 35px;
+        height: 35px;
+    }
+    .nav-image:hover{
+        width: 45px;
+        height: 45px;
+    }
+    .home-btn{
+        margin-top: 110px;
+    }
+    .btn-outline-warning{
+        width: 100px;
+    }
+    .top-ad-name{
+        font-size: 23px
+    }
+    .top-ad-text{
+        font-size: 15px;
+    }
+   .col-11,.col-sm-6,.col-md-4,.col-lg-3{
+        margin:auto;
+    }
+    #footer {
+        height: 230px;
+    }
+    .vertical-align{
+        padding-top: 20px
+    }
+    #search{
+        display: flex;
+        justify-content: center;
+        width: 305px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+    .card-img-view{
+        max-height: 300px;
+    }
+    .delete-btn{
+        width: 100px;
+    }
+    .edit-btn{
+        width: 100px;
+    }
+    #more-filters{
+        width: 100px;
+    }
+    .open-filters{
+        margin-bottom: 10px;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .top-ad-section{
+        padding: 5px 7.5vw;
+    }
+    .top-ad-header{
+        padding-top: 20px;
+    }
+    .carousel-top-ad{
+        max-height: 200px;
+    }
+    .carousel-top-ad-img{
+        height: 248px;
+    }
+    .carousel-caption{
+        padding-bottom: 25px;
+    }
+    .border-top-ad{
+        margin-top: 30px;
+    }
+
+    .card-img-view{
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        border-bottom: 2px solid rgba(0, 0, 0, 0.5);
+        border-right: none;
+    }
+    .advert-price{
+        padding: 10px;
+    }
+    .page-404 h1{
+        font-size: 45px;
+    }
+    .page-404 h3{
+        font-size: 28px;
+        padding: 20px;
+    }
+    .jumbotron h1{
+        font-size: 45px;
+    }
+    .jumbotron h3{
+        font-size: 28px;
+        padding: 20px;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .advert-name{
+        padding-top: 10px;
+    }
+}
